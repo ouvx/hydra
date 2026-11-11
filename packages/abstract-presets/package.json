@@ -1,0 +1,41 @@
+{
+  "name": "@ouvx/abstract-presets",
+  "version": "0.1.0",
+  "description": "Shared ABSTRACT Hydra presets and parameter API for Ghost Arcade (AGPL).",
+  "license": "AGPL-3.0-or-later",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test test/*.test.js",
+    "prepare": "npm run build",
+    "prepack": "npm run build"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ouvx/hydra.git",
+    "directory": "packages/abstract-presets"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
